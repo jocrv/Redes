@@ -1,0 +1,791 @@
+
+
+DEFINIÇÃO
+Princípios teóricos de segurança e administração de redes de computadores. Ferramentas para o alcance de um nível adequado de segurança e gerência de redes.
+
+PROPÓSITO
+Conhecer os riscos da operação e da utilização de redes de computadores, bem como os protocolos de segurança e os tipos de ferramentas adequadas para a administração e o gerenciamento de tais processos.
+
+OBJETIVOS
+MÓDULO 1
+
+Identificar os riscos de segurança nas redes de computadores
+
+MÓDULO 2
+
+Selecionar softwares e tipos de equipamentos adequados para a diminuição dos riscos de segurança nas redes
+
+MÓDULO 3
+
+Reconhecer a arquitetura de gerenciamento de redes
+
+Identificar os riscos de segurança nas redes de computadores
+
+INTRODUÇÃO
+A internet é uma rede comercial que pode ser utilizada por qualquer pessoa ou empresa em todos os cantos do mundo. Com isso, possíveis problemas de segurança afloram.
+
+Pessoas mal-intencionadas utilizam essa rede para realizar atividades maliciosas, como roubo de informações e de identidade, paralisação de serviços etc.
+
+Por isso, o tópico segurança destaca-se atualmente como uma das grandes preocupações dos administradores de redes. Garantir a segurança na comunicação de dados passou a ser uma das questões cruciais na utilização da internet.
+
+É fundamental que tanto usuários quanto profissionais de tecnologia da informação (TI) tenham conhecimento dos riscos no uso da rede e saibam identificar ferramentas capazes de minimizá-los.
+
+
+Fonte: Shutterstock
+DEFINIÇÕES
+Para identificar os riscos relacionados ao uso de uma rede de computadores, é importante conhecer algumas definições. Por conta disso, iremos nos basear na norma ABNT NBR ISO IEC 27001:2013, reconhecida mundialmente como uma referência na área de segurança. Essa norma apresenta as seguintes definições:
+
+AMEAÇA
+Causa potencial de um incidente indesejado que pode resultar em danos a um sistema ou organização.
+
+ATAQUE
+Tudo aquilo que tenta destruir, expor, alterar, desativar, roubar, obter acesso não autorizado ou fazer uso não autorizado de um ativo.
+
+ATIVO
+Qualquer coisa que tenha valor para uma pessoa ou organização. Exemplo: os dados do cartão de crédito, um projeto de uma empresa, um equipamento e até mesmo os colaboradores de uma empresa podem ser definidos como ativos humanos.
+
+Como é possível perceber nessas definições, a ameaça está relacionada a algo que pode comprometer a segurança, enquanto o ataque é a ação efetiva contra determinado ativo.
+
+IMPORTANTE
+Um incidente de segurança ocorre quando uma ameaça se concretiza e causa um dano a um ativo.
+
+Se uma ameaça se concretizou e causou um dano, isso significa que alguma propriedade da segurança foi comprometida.
+
+TRÊS PROPRIEDADES SÃO TRATADAS COMO OS PILARES DA SEGURANÇA: CONFIDENCIALIDADE, INTEGRIDADE E DISPONIBILIDADE (CID).
+Além delas, outras propriedades também são importantes no contexto de segurança. A norma ABNT NBR ISO IEC 27001:2013 destaca as seguintes:
+
+
+CONFIDENCIALIDADE
+Propriedade cuja informação não está disponível para pessoas, entidades ou processos não autorizados. Em outras palavras, a confidencialidade está relacionada ao sigilo dos dados. Somente entes autorizados podem acessá-los.
+
+
+INTEGRIDADE
+Propriedade que protege a exatidão e a completeza de ativos. Trata-se da indicação de que o dado não foi adulterado. Exemplo: um ativo permanece intacto após ser armazenado ou transportado.
+
+
+DISPONIBILIDADE
+Propriedade de tornar o dado acessível e utilizável sob demanda por fontes autorizadas. Se uma pessoa ou um processo autorizado quiser acessar um dado ou equipamento, ele estará em funcionamento.
+
+
+AUTENTICIDADE
+Propriedade que assegura a veracidade do emissor e do receptor de informações trocadas. A autenticidade assevera que quem está usando ou enviando a informação é realmente uma determinada pessoa ou processo. Em outras palavras, garante a identidade.
+
+
+NÃO REPÚDIO OU IRRETRATABILIDADE
+Propriedade muito importante para fins jurídicos. Trata-se da garantia de que o autor de uma informação não pode negar falsamente a autoria dela. Desse modo, se uma pessoa praticou determinada ação ou atividade, ela não terá como negá-la. O não repúdio é alcançado quando a integridade e a autenticidade são garantidas.
+
+
+CONFIABILIDADE
+Propriedade da garantia de que um sistema vai se comportar segundo o esperado e projetado. Exemplo: se determinado equipamento foi projetado para realizar uma operação matemática, esse cálculo será realizado corretamente.
+
+
+LEGALIDADE
+Propriedade relacionada com o embasamento legal, ou seja, ela afere se as ações tomadas têm o suporte de alguma legislação ou norma. No caso do Brasil, podemos citar o Marco Civil da Internet , a Lei Geral de Proteção de Dados (LGPD) e o conjunto de normas 27.000 da ABNT.
+
+Os mecanismos de proteção se relacionam a práticas, procedimentos ou mecanismos capazes de proteger os ativos contra as ameaças, reduzindo ou eliminando vulnerabilidades. Além disso, eles evitam que uma dessas propriedades sejam comprometidas.
+
+
+Fonte: Shutterstock
+TIPOS DE ATAQUES
+Para haver a identificação dos riscos, será necessário entender e classificar os tipos de ataques que podem ser realizados contra uma rede de computadores.
+
+Interligadas, as tabelas a seguir apresentam os critérios de classificação desses tipos e as suas descrições:
+
+ATAQUES	DESCRIÇÃO	TIPOS
+ATIVOS	Tentam alterar os recursos do sistema ou afetar a sua operação.	Ataques de interrupção
+Ataques de modificação
+Ataques de fabricação ou personificação
+Ataques de repetição
+PASSIVOS	Tentam descobrir ou utilizar as informações do sistema sem o objetivo de afetar seus recursos.	Ataques de interceptação
+Tabela 1: Classificação primária dos tipos de ataques.
+
+CRITÉRIOS	TIPOS	DESCRIÇÃO	ATAQUES
+PONTO DE INICIAÇÃO	Ataques internos (inside attack)	Realizados dentro da própria rede. O atacante e a vítima estão na mesma rede (doméstica ou corporativa).	
+Ataques externos (outside attack)	Feitos a partir de um ponto externo à rede da vítima.	
+MÉTODO DE ENTREGA	Ataques diretos	O atacante, sem a ajuda de terceiros, realiza uma ação diretamente contra a vítima.	
+Ataques indiretos	O atacante emprega terceiros, ou seja, outros usuários da rede, para que o ataque seja realizado.	
+OBJETIVO	Ataques de interceptação	Buscam obter informações que trafegam na rede, atacando a confidencialidade.	Ataques passivos (predominantemente)
+Ataques de interceptação	Seu objetivo é indisponibilizar um ou mais serviços de rede por meio do excesso de informação ou simplesmente desligando o equipamento.	Ataques ativos
+Ataques de modificação	Ocorrem quando um atacante tem acesso não autorizado a um sistema ou a uma rede e modifica o conteúdo das informações ou as configurações de um sistema.
+Ataques de fabricação ou personificação	Pretendem a quebra, principalmente, da autenticidade de um serviço ou de uma rede.
+Ataques de repetição	Uma entidade maliciosa intercepta e repete uma transmissão de dados válida que trafega através de uma rede para produzir um efeito não autorizado, como a redundância de pedidos de um item.
+Tabela 2: Classificação secundária dos tipos de ataques.
+
+ATAQUES ATIVOS E PASSIVOS
+TERCEIROS
+O uso de terceiros pode amplificar o poder de ataque ao, por exemplo, aumentar o volume de tráfego contra a vítima em um ataque contra a disponibilidade.
+
+
+Neste vídeo, apresentaremos as principais características dos ataques passivos e ativos. Para saber mais sobre Ataques Ativos e Passivos, clique aqui.
+
+
+ETAPAS DE UM ATAQUE
+Precisamos dividir um ataque em sete etapas para poder analisá-lo de forma mais criteriosa:
+
+Reconhecimento;
+Armamento (weaponization);
+Entrega (delivery);
+Exploração;
+Installation;
+Comando e controle;
+Conquista.
+
+Fonte: Shutterstock
+Os atacantes passam a ter mais privilégios no alvo à medida que avançam nas etapas. Portanto, pelo lado da defesa, o objetivo é pará-los o mais cedo possível para diminuir o dano causado.
+
+Analisaremos a seguir cada uma dessas etapas.
+
+
+
+1. RECONHECIMENTO:
+Na primeira etapa, o ator da ameaça realiza uma pesquisa para coletar informações sobre o local a ser atacado. Trata-se de uma fase preparatória na qual o atacante procura reunir o máximo de informações sobre o alvo antes de lançar um ataque ou analisar se vale a pena executá-lo.
+
+As informações podem ser obtidas por meio de diversas fontes:
+
+Sites;
+Dispositivos de rede voltados para o público;
+Artigos de notícias;
+Anais de conferências;
+Meios de comunicação social.
+Qualquer local público é capaz de ajudar a determinar o que, onde e como o ataque pode ser realizado. O atacante escolhe alvos negligenciados ou desprotegidos, pois eles possuem a maior probabilidade de serem penetrados e comprometidos.
+
+2. ARMAMENTO (WEAPONIZATION):
+Após a coleta de informações, o atacante seleciona uma arma a fim de explorar as vulnerabilidades dos sistemas. É comum utilizar a expressão exploits para essas armas, que podem estar disponíveis em sites na internet ou ser desenvolvidas especificamente para determinado ataque.
+
+O desenvolvimento de uma arma própria dificulta a detecção pelos mecanismos de defesa. Essas armas próprias são chamadas de zero-day attack.
+
+Após o emprego da ferramenta de ataque, espera-se que o atacante tenha conseguido alcançar seu objetivo: obter acesso à rede ou ao sistema que será atacado.
+
+
+
+
+
+3. ENTREGA (DELIVERY)
+Nesta fase, o atacante entrega a arma desenvolvida para o alvo. Para essa entrega, podem ser utilizados diversos mecanismos. Eis alguns exemplos:
+
+Mensagens de correio eletrônico (e-mail);
+Mídias USB;
+Websites falsos ou infectados;
+Interação nas redes sociais.
+O atacante pode usar um método ou uma combinação de métodos para aumentar a chance de entrega do exploit. Seu objetivo é fazer com que a arma pareça algo inocente e válido, pois ludibriar o usuário permite que ela seja entregue.
+
+Uma prática comum para essa entrega é o uso de phishing. Tipicamente, são enviados e-mails com algum assunto aparentemente de interesse da vítima. Nesta mensagem, existe um link ou um anexo malicioso que serve de meio de entrega da arma na máquina alvo.
+
+4. EXPLORAÇÃO
+A etapa de exploração ocorre quando o atacante, após entregar a arma, explora alguma vulnerabilidade (conhecida ou não) na máquina infectada em busca de outros alvos dentro da rede de destino. As vulnerabilidades que não são publicamente conhecidas são chamadas de zero-day.
+
+No caso do emprego de phishing, a exploração ocorre quando o e-mail recebido é aberto e o usuário clica no link ou abre o anexo, instalando um software malicioso que infecta a sua máquina. Isso permite o controle dela por parte do autor do ataque.
+
+A partir desse momento, o atacante obtém acesso ao alvo, podendo obter as informações e os sistemas disponíveis dentro da rede atacada.
+
+Os alvos de exploração mais comuns são aplicativos, vulnerabilidades do sistema operacional e pessoas.
+
+
+
+
+
+5. INSTALLATION
+A partir da exploração da máquina realizada na fase anterior, o atacante busca instalar algum tipo de software que permita a manutenção do acesso à máquina ou à rede em um momento posterior.
+
+Para essa finalidade, é instalado no sistema alvo um Remote Access Trojan (RAT). Conhecido também como backdoor, o RAT permite ao atacante obter o controle sobre o sistema infectado.
+
+Pelo lado do atacante, é importante que o acesso remoto não alerte nenhum sistema de proteção e permaneça ativo mesmo após varreduras por sistemas de segurança da rede de destino.
+
+6. COMANDO E CONTROLE
+A partir do momento em que um RAT (backdoor) é instalado no sistema alvo, o atacante passa a ter um canal de comunicação com o software instalado no alvo.
+
+Denominado comando e controle, tal canal possibilita o envio de comandos para realizar ataques na própria rede local ou para atacar a rede de terceiros, caracterizando, assim, um ataque indireto.
+
+
+
+
+
+7. CONQUISTA
+Quando o atacante chega à última etapa, isso é um indício de que o objetivo original foi alcançado. A partir de agora, ele pode roubar informações, utilizar o alvo para realizar ataques de negação de serviço, envio de spam, manipulação de pesquisas ou jogos online, entre outras atividades.
+
+Nesse ponto, o agente de ameaças já está profundamente enraizado nos sistemas da organização, escondendo seus movimentos e cobrindo seus rastros.
+
+É extremamente difícil remover o agente de ameaças da rede quando ele já chegou a esta fase.
+
+SAIBA MAIS
+Vamos analisar a seguinte noticia:
+
+“Brasil sofreu 15 bilhões de ataques cibernéticos em apenas três meses. A questão não é mais ‘o que podemos fazer se sofrermos um ataque cibernético?’, mas, sim, ‘o que podemos fazer quando sofremos um ataque cibernético?’”
+
+(Fonte: TECMUNDO, 2019)
+
+Ao analisarmos o caso, percebemos a importância da análise dos riscos relacionados ao uso de uma rede de computadores sem a devida proteção.
+
+Pesquise outras situações similares e procure perceber a intervenção dos mecanismos de proteção nesses casos.
+
+VERIFICANDO O APRENDIZADO
+1. OS ATAQUES PODEM SER CLASSIFICADOS DE DIVERSAS FORMAS: ATIVO OU PASSIVO, INTERNO OU EXTERNO, DIRETO OU INDIRETO. OS PASSIVOS SÃO OS DE INTERCEPTAÇÃO; OS ATIVOS, OS DE MODIFICAÇÃO, INTERRUPÇÃO, PERSONIFICAÇÃO OU REPETIÇÃO.
+
+CONSIDERE QUE VOCÊ ESTEJA REALIZANDO A COMPRA ONLINE DE UMA CANETA. AO VERIFICAR O EXTRATO DE SUA CONTA, PERCEBE QUE HAVIA DUAS COBRANÇAS DO MESMO VALOR. ESSE TIPO DE EVENTO PODE SER ASSOCIADO AO ATAQUE DE:
+Modificação, porque o atacante modificou a transação, permitindo que a operação fosse executada duas vezes.
+
+Repetição, pois o atacante capturou os pacotes com as informações de pagamento e os enviou novamente para a cobrança no banco.
+
+Interceptação, uma vez que o atacante monitorou a transação e, percebendo a troca de informações financeiras, repetiu a operação.
+
+Personificação, já que o atacante assumiu a identidade da loja online, repetindo a operação financeira.
+
+2. UMA DAS GRANDES AMEAÇAS EXISTENTES NA INTERNET É A CHAMADA APT. SIGLA PARA ADVANCED PERSISTEN THREAT, ELA SE REFERE A ATAQUES DIRECIONADOS DE ORGANIZAÇÕES A DETERMINADAS ORGANIZAÇÕES E EMPRESAS.
+
+IMAGINE QUE VOCÊ, APÓS SER CONVOCADO PARA ANALISAR AS AÇÕES DE UMA APT, TENHA PERCEBIDO QUE ELA ESTAVA ENVIANDO E-MAILS A DETERMINADA EMPRESA COM UM ANEXO POSSIVELMENTE MALICIOSO.
+
+A ETAPA DE ATAQUE IDENTIFICADA ESTÁ RELACIONADA COM:
+Conquista, porque a APT obteve acesso a um endereço de e-mail válido da empresa.
+
+Installation, pois a APT enviou a arma para obter acesso ao alvo.
+
+Exploração, uma vez que a APT se aproveitou de uma vulnerabilidade no sistema de e-mail.
+
+Entrega, já que a APT utilizou um meio de entregar a arma a seu alvo.
+
+GABARITO
+1. Os ataques podem ser classificados de diversas formas: ativo ou passivo, interno ou externo, direto ou indireto. Os passivos são os de interceptação; os ativos, os de modificação, interrupção, personificação ou repetição.
+
+Considere que você esteja realizando a compra online de uma caneta. Ao verificar o extrato de sua conta, percebe que havia duas cobranças do mesmo valor. Esse tipo de evento pode ser associado ao ataque de:
+
+A alternativa "B " está correta.
+
+
+O ataque de repetição permitiu que fosse debitado duas vezes o mesmo valor de sua conta. Como o atacante capturou os pacotes que realizam a transação financeira, ele pôde modificar a conta de destino e – considerando que os dados da transação estivessem presentes no pacote – receber o valor cobrado. Esse mesmo ataque pode ser utilizado quando um atacante captura pacotes de autenticação, permitindo o acesso a determinada rede ou sistema.
+
+2. Uma das grandes ameaças existentes na internet é a chamada APT. Sigla para Advanced Persisten Threat, ela se refere a ataques direcionados de organizações a determinadas organizações e empresas.
+
+Imagine que você, após ser convocado para analisar as ações de uma APT, tenha percebido que ela estava enviando e-mails a determinada empresa com um anexo possivelmente malicioso.
+
+A etapa de ataque identificada está relacionada com:
+
+A alternativa "D " está correta.
+
+
+O entendimento das fases dos ataques é de suma importância na segurança da rede. Quanto mais cedo o ataque for detectado e interrompido, menos danos ele causará, porque o atacante (no caso ilustrado, uma APT) terá tido uma menor penetração na rede e comprometido menos o ambiente.
+
+Selecionar softwares e tipos de equipamentos adequados para a diminuição dos riscos de segurança nas redes
+
+INTRODUÇÃO
+Estar conectado à internet nos expõe a diversos riscos, como roubo de informações e de identidade, adulteração de informações etc. De acordo com a norma ABNT 27001:2013, para minimizar os riscos dessa conexão, é necessário implementar mecanismos de controle a fim de garantir a segurança dela.
+
+Esses mecanismos podem ser divididos em dois tipos:
+
+
+MECANISMOS DE CONTROLE FÍSICOS
+Evitam ou dificultam as falhas nos equipamentos e instalações.
+
+
+MECANISMOS DE CONTROLE LÓGICOS
+Evitam ou dificultam as falhas relacionadas aos softwares utilizados.
+
+VERIFICAREMOS A SEGUIR A APLICAÇÃO DE AMBOS NA MANUTENÇÃO DA SEGURANÇA DE UMA CONEXÃO.
+SEGURANÇA FÍSICA
+
+Fonte: Shutterstock
+Abrange todo ambiente em que os sistemas de informação estão instalados. Seu objetivo principal é garantir que nenhum dano físico ocorra nos equipamentos.
+
+EXEMPLO
+Roubo de equipamentos, incêndio, inundação e qualquer ameaça às instalações físicas.
+
+A norma ABNT NBR ISO/IEC 27002:2013 divide a segurança física em dois itens principais:
+
+
+ÁREAS SEGURAS
+Previnem o acesso físico não autorizado, os danos e as interferências em instalações e informações da organização.
+
+
+EQUIPAMENTOS
+Impedem perdas, danos, furto ou comprometimento de ativos e interrupção das atividades da organização.
+
+A SEGURANÇA FÍSICA ENVOLVE OUTRAS ÁREAS DA ENGENHARIA, COMO A CIVIL E A ELÉTRICA, AO PERMITIR A PROJEÇÃO DE PRÉDIOS COM PAREDES ADEQUADAS À PROTEÇÃO DOS EQUIPAMENTOS, SISTEMAS DE PARA-RAIOS, ATERRAMENTO, LIMPEZA DA ÁREA PARA EVITAR INCÊNDIOS ETC.
+Alguns exemplos de mecanismos de controle físicos podem ser encontrados no emprego de:
+
+
+SISTEMAS DE REFRIGERAÇÃO E DE COMBATE A INCÊNDIO
+Projetados para os equipamentos poderem operar em condições adequadas de temperatura e umidade. Ainda garantem que os casos de incêndio possam ser combatidos o mais rápido possível.
+
+
+SALA-COFRE
+Espaço construído com paredes corta-fogo, sistemas de refrigeração e de forma hermética para proteger equipamentos críticos de TI.
+
+
+SISTEMAS DE ENERGIA REDUNDANTES
+Funcionam como no-breaks (Uninterruptable Power Supply - UPS) e geradores. Ambos são necessários ao permitirem que, em caso de queda de energia, os equipamentos permaneçam em operação. Isso garante tanto o fornecimento constante de energia quanto a manutenção dela dentro da tensão recomendada.
+
+
+PREPARAÇÃO DO AMBIENTE CONTRA ALAGAMENTO
+No caso de chuvas fortes.
+
+
+LIMPEZA DA ÁREA EXTERNA
+Para evitar incêndios.
+
+SEGURANÇA LÓGICA
+A segurança lógica envolve o emprego de soluções baseadas em softwares para garantir a CID. Entre os diversos mecanismos existentes, destacaremos os oito listados a seguir:
+
+Autenticação;
+Sistemas de controle de acesso;
+Criptografia;
+Funções de hash;
+Assinatura digital;
+Certificado digital;
+Redes Virtuais Privadas (VPN);
+Firewall, sistemas de detecção de intrusão e antivírus.
+
+Fonte: Shutterstock
+VAMOS ENTENDER AGORA O FUNCIONAMENTO DE CADA UM DESSES MECANISMOS.
+1. AUTENTICAÇÃO
+Está relacionada à garantia da propriedade da autenticidade, evitando que terceiros possam fingir ser uma das partes legítimas a fim de acessar sistemas ou informações não autorizadas.
+
+
+Fonte: Shutterstock
+A autenticação diminui o risco de um ataque de personificação ou fabricação. Para realizá-la, podem ser utilizados os seguintes mecanismos:
+
+Senhas;
+Controles biométricos;
+Tokens;
+Certificados digitais.
+O mecanismo escolhido deve se adequar ao objetivo de segurança a ser alcançado. Atualmente, os controles biométricos são considerados os mais eficientes.
+
+Exemplo: Digitais, reconhecimento de íris, palma da mão e certificados digitais.
+
+2. SISTEMAS DE CONTROLE DE ACESSO
+
+Fonte: Shutterstock
+Gerenciam os usuários que podem acessar sistemas e redes, autorizando apenas o acesso às informações que lhes couberem. Desse modo, a confidencialidade dos dados está garantida.
+
+Exemplo: o uso de senhas nas redes wi-fi garante que somente as pessoas autorizadas possam utilizá-las.
+
+PARA QUE O CONTROLE DE ACESSO SEJA EFETIVO, DEVE-SE EMPREGAR UM MECANISMO DE AUTENTICAÇÃO A FIM DE VALIDAR A IDENTIDADE E – CASO O ACESSO ESTEJA AUTORIZADO – RESTRINGIR OS DIREITOS DE ACESSO PARA CADA INDIVÍDUO DE ACORDO COM O SEU PERFIL DE USO.
+3. CRIPTOGRAFIA
+Esta é uma vasta área que, assim como a criptoanálise – cujas técnicas não abordaremos aqui –, compõe a criptologia.
+
+A criptografia é uma área que estuda técnicas para esconder não a mensagem real, mas, na verdade, o seu significado. Ela pode inclusive ser utilizada para garantir a CID. A propriedade a ser garantida depende do mecanismo utilizado e de que maneira ele foi empregado.
+
+FUNÇÕES
+Para entendermos o processo criptográfico, iremos, inicialmente, identificar duas funções principais:
+
+CRIPTOANÁLISE
+Sua finalidade é testar e validar os métodos criptográficos, ou seja, verificar se é possível obter o texto original sem haver o conhecimento de todo o processo.
+
+CRIPTOLOGIA
+Ciência que, de forma segura, cuida da comunicação e do armazenamento de dados.
+
+CIFRAMENTO
+Transforma um escrito simples, cujo alfabeto comum é utilizado para compor a mensagem original, em um texto cifrado. Nesse texto, as letras originais são substituídas pelas do alfabeto cifrado, escondendo, dessa forma, o conteúdo da mensagem. A função do ciframento é responsável pela criptografia da mensagem original. Já a substituição das letras da original na mensagem cifrada é feita pelas cifras.
+
+
+Fonte: Shutterstock
+DECIFRAMENTO
+Realiza o processo oposto. Como o texto cifrado é transformado no original, o conteúdo de sua mensagem pode ser entendido. A função de deciframento é a responsável pela decriptografia da mensagem cifrada.
+
+
+Fonte: Shutterstock
+CIFRAS
+Qualquer forma de substituição criptográfica aplicada ao texto original da mensagem.
+
+AS TÉCNICAS MODERNAS DE CRIPTOGRAFIA ENVOLVEM O USO DE UM ALGORITMO DE CRIPTOGRAFIA ASSOCIADO A UMA CHAVE. O SEGREDO DO PROCESSO NÃO ESTÁ NO ALGORITMO EM SI, E SIM NA CHAVE UTILIZADA PARA A REALIZAÇÃO DO CIFRAMENTO.
+CLASSIFICAÇÃO
+Quanto ao tipo de chave empregada, os algoritmos criptográficos podem ser classificados como:
+
+
+ALGORITMOS DE CHAVE SIMÉTRICA
+Criptografia de chave privada. Empregam uma única chave. Dessa forma, a mesma chave que realiza a cifragem faz a decifragem. Alguns exemplos de algoritmos simétricos: DES, 3DES, Blowfish, RC4, RC5, IDEA, Rinjdael e Advanced Encrytion Standard (AES).
+
+
+ALGORITMOS DE CHAVE ASSIMÉTRICA
+Criptografia de chave pública. Utilizam duas chaves (pública e privada): uma para cifrar e outra para decifrar. Dependendo da ordem em que ambas são empregadas, o algoritmo pode garantir a confidencialidade ou a autenticidade.
+
+ADVANCED ENCRYTION STANDARD (AES)
+Algoritmo padrão adotado por diversos governos e várias empresas para garantir a confidencialidade.
+
+QUANDO A CHAVE PÚBLICA É UTILIZADA NA FUNÇÃO DE CIFRAGEM, APENAS A PRIVADA PODE DECIFRAR.
+Como o nome sugere, a chave privada fica restrita à entidade.
+
+Exemplo: pessoa, empresa ou equipamento.
+
+Portanto, neste caso, está garantida a confidencialidade, porque só quem possui a chave privada pode decifrar o conteúdo.
+
+
+Fonte: Shutterstock
+QUANDO OCORRE O INVERSO, A CHAVE PRIVADA É EMPREGADA NO PROCESSO DE CIFRAGEM E APENAS A PÚBLICA PODE DECIFRAR.
+Entretanto, como a chave usada é a pública, qualquer pessoa pode possui-la e, portanto, decifrar a mensagem.
+
+Não há como garantir a confidencialidade dessa forma: o que está garantido, na verdade, é a autenticidade. A aplicação das chaves nesta ordem permite o emprego da assinatura digital.
+
+O algoritmo Rivest-Shamir-Adleman (RSA) é o padrão utilizado para transações comerciais, financeiras etc.
+
+4. FUNÇÕES DE HASH
+O objetivo das funções de resumo de mensagem ou de hash é a garantia da integridade das informações. Para calcular o resumo, pode ser utilizado qualquer algoritmo que pegue uma mensagem de qualquer tamanho e a mapeie em uma sequência de caracteres de tamanho fixo.
+
+EXEMPLO
+Você tem um arquivo chamado aula.doc e quer calcular o resumo dessa mensagem. Uma das funções de hash bastante utilizadas é o Message-Digest Algorithm 5 (MD5). Então, caso você tenha instalado em seu computador o MD5, pode utilizar o seguinte comando:
+
+MD5SUM AULA.DOC
+A saída desse comando é uma sequência de caracteres:
+
+5 9 5 F 4 4 F E C 1 E 9 2 A 7 1 D 3 E 9 E 7 7 4 5 6 B A 8 0 D 1
+Essa saída será permanente enquanto não ocorrer nenhuma alteração no arquivo. Portanto, toda vez que quiser verificar se ele foi modificado, basta executar novamente a função de hash e compará-la à sequência original. Se ela permanecer a mesma, isso demonstra que o arquivo é íntegro; caso contrário, é uma evidência de que ele foi modificado.
+
+Uma propriedade desejável na função de resumo é que, diante de qualquer modificação mínima na informação, o resumo gerado deve ser totalmente diferente. As funções de resumo também são utilizadas como auxiliares no processo de autenticação.
+
+
+Fonte: Shutterstock
+Alguns sistemas usam o hash para armazenar a senha de um usuário. Portanto, quando ele cadastra uma senha, o sistema calcula o hash e armazena esse valor. Quando o usuário for digitar sua senha para entrar no mesmo sistema, o sistema calculará o hash, enviará essa informação e comparará com o que está armazenado. Se for igual, o seu acesso será autorizado.
+
+A vantagem dessa solução é que a senha do usuário não fica armazenada no sistema nem trafega pela rede. Quem o faz é o hash.
+
+Outra propriedade desejável das funções de resumo é que ela não é inversível, ou seja, se temos o hash da mensagem, não conseguimos descobrir a mensagem original. Dessa forma, podemos afirmar que ele configura uma função criptográfica, pois esconde o conteúdo de uma mensagem. Então, quando ocorre o envio do hash da senha, não há como um atacante descobrir a senha original.
+
+Entretanto, o uso isolado dele na autenticação pode gerar uma facilidade para o ataque de reprodução. Um atacante que conseguir obter o hash das assinaturas poderá repetir o seu processo, enviando o resumo e obtendo a autorização de acesso.
+
+Além do MD5, outras funções de resumo muito utilizadas são as seguintes:
+
+SECURE HASH ALGORITHM VERSION 1 (SHA-1);
+SECURE HASH ALGORITHM VERSION 2 (SHA-2);
+SECURE HASH ALGORITHM VERSION 3 (SHA-3).
+5. ASSINATURA DIGITAL
+
+Fonte: Shutterstock
+O objetivo do emprego da assinatura digital é assegurar a autenticidade e a integridade das informações. Automaticamente, está garantido o não repúdio. A assinatura ainda garante tanto a validade jurídica dos documentos, pois existe a certeza de que eles não sofreram qualquer adulteração, estando íntegros e completos, quanto a sua autoria, asseverando que eles realmente foram assinados por determinada pessoa.
+
+O PROCESSO UTILIZADO PARA REALIZAR A ASSINATURA DIGITAL COMBINA O EMPREGO DA CRIPTOGRAFIA ASSIMÉTRICA COM AS FUNÇÕES DE RESUMO DA MENSAGEM. PARA QUE UM DOCUMENTO SEJA ASSINADO DIGITALMENTE, O USUÁRIO DEVE SEGUIR ESTES PASSOS:
+CALCULAR O RESUMO DA MENSAGEM.
+
+CIFRAR ESSE RESUMO COM A CHAVE PRIVADA DO EMISSOR DO DOCUMENTO.
+
+ENVIAR A MENSAGEM COM O RESUMO CRIPTOGRAFADO, QUE É A ASSINATURA DIGITAL.
+O esquema a seguir ilustra esse processo:
+
+
+Fonte: Shutterstock
+Assinatura digital de um documento. Fonte: (FOROUZAN; MOSHARRAF, 2013).
+
+Ao receber o documento, o receptor precisa realizar o seguinte processo para o validar:
+
+O usuário deve calcular o hash da mensagem e decifrar o outro recebido com a utilização da chave pública do emissor. Em seguida, ele vai comparar os dois hashes. Se forem iguais, há a garantira de que o documento não foi modificado e o emissor é autêntico. Caso sejam diferentes, algum problema ocorreu. Mas não é possível garantir o que aconteceu, já que não se sabe se o problema reside na modificação dele ou na autenticidade do emissor. Estabelece-se apenas que o documento não é válido.
+
+6. CERTIFICADO DIGITAL
+Ele é utilizado para vincular a chave pública a uma entidade, como pessoa, empresa, equipamento etc. O certificado contém a chave pública da entidade, que é assinada digitalmente por uma terceira parte confiável chamada de Autoridade Certificadora (AC).
+
+O EMPREGO DO CERTIFICADO DIGITAL É IMPORTANTE PARA GARANTIR UM ATAQUE CONHECIDO COMO “HOMEM NO MEIO” OU, EM INGLÊS, MAN IN THE MIDDLE (MITM). O MITM OCORRE QUANDO UM ATACANTE PODE INTERCEPTAR O ENVIO DA CHAVE PÚBLICA E TER ACESSO ÀS INFORMAÇÕES.
+Vejamos a descrição deste problema:
+
+AUTORIDADE CERTIFICADORA (AC)
+Cartório eletrônico que garante a segurança de todo o processo na troca das chaves públicas.
+
+
+Alice quer enviar um documento para Bob. Desse modo, ela solicita a chave pública dele para poder cifrar a mensagem.
+
+
+Darth, enquanto isso, realiza um ataque de interceptação para monitorar a comunicação entre ambos. Quando percebe que houve uma solicitação da chave pública de Bob, Darth envia para Alice a sua chave. Ao mesmo tempo, se fazendo passar por ela, solicita a Bob a chave pública dele, o que caracteriza um ataque de personificação.
+
+
+Alice, dessa forma, cifra a mensagem com a chave privada de Darth. Obviamente, ele consegue ler as informações enviadas. Para que o processo continue, Darth agora cifra a mensagem com a chave pública de Bob e a envia. Bob, em seguida, recebe a mensagem e a decifra com sua chave privada.
+
+Ao monitorar a troca de mensagens entre Alice e Bob, Darth conseguiu obter as informações, quebrando a confidencialidade desse processo de comunicação.
+
+Para resolver esse problema, é necessária uma terceira parte confiável: a AC. Ela é a responsável por armazenar as chaves públicas das entidades envolvidas no processo de comunicação. Dessa maneira, a chave fica assinada digitalmente pela autoridade certificadora, como ilustra o esquema a seguir:
+
+
+Fonte: Shutterstock
+Uso do certificado de chave pública. Fonte: (STALLINGS, 2008).
+
+Voltemos ao exemplo da comunicação entre Alice e Bob. Agora ela já pode solicitar o certificado digital dele para a AC. Ao receber esse certificado, Alice irá verificar a assinatura digital da AC. Se ela estiver correta, é um indício de que Alice possui o certificado correto de Bob, podendo, dessa forma, realizar a transmissão das mensagens.
+
+O PROCESSO PARA OBTER A CHAVE PRIVADA DA AC, CONTUDO, PODE ESBARRAR NO MESMO PROBLEMA. PARA O PROCESSO FUNCIONAR CORRETAMENTE, O USUÁRIO DEVE IR AO SITE DA AC E REALIZAR O DOWNLOAD DOS CERTIFICADOS – CHAMADOS DE CERTIFICADOS RAIZ –, GARANTINDO, ASSIM, A OBTENÇÃO DA CHAVE PÚBLICA CORRETA.
+SAIBA MAIS
+No Brasil, as ACs estão organizadas na Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil). Trata-se de uma cadeia hierárquica de confiança que viabiliza a emissão de certificados digitais para a identificação virtual do cidadão.
+
+6. REDES VIRTUAIS PRIVADAS (VPN)
+Sigla de Virtual Private Network, a VPN permite a utilização de um meio inseguro de forma segura. Afinal, quando estamos conectados à internet e desejamos acessar algum serviço ou rede, ficamos vulneráveis a diversos tipos de ataques.
+
+Para minimizar o risco inerente a esse acesso, podemos empregar uma VPN, que utilizará um túnel de comunicação entre dois dispositivos. Considere a topologia desta imagem na qual as redes da matriz e da filial desejam trocar informações por meio da internet:
+
+
+Fonte: Shutterstock
+Ao trafegar pela internet, as informações trocadas entre as redes da matriz e da filial estão sujeitas a diversos tipos de ataque. Na utilização de uma VPN, é criado, como ilustra a imagem a seguir, um túnel virtual entre essas duas redes:
+
+
+Fonte: Shutterstock
+NA UTILIZAÇÃO DO TÚNEL, AS INFORMAÇÕES TRAFEGADAS FICAM PROTEGIDAS, JÁ QUE OS DADOS SÃO CRIPTOGRAFADOS. ALÉM DISSO, PODEM SER UTILIZADOS MECANISMOS DE AUTENTICAÇÃO E INTEGRIDADE PARA GARANTIR TANTO A ENTRADA EM CADA UMA DAS REDES SÓ DE PACOTES AUTORIZADOS QUANTO A MANUTENÇÃO DE SUA ESTRUTURA, OU SEJA, QUE ELES NÃO SEJAM MODIFICADOS.
+7. FIREWALL, SISTEMAS DE DETECÇÃO DE INTRUSÃO E ANTIVÍRUS
+No vídeo a seguir, falaremos sobre os seguintes mecanismos de segurança lógica: firewall, sistemas de detecção de intrusão e antivírus.
+
+
+Firewall, sistemas de detecção de intrusão e antivírus. Para saber mais sobre outros Mecanismos de Segurança Lógica, clique aqui.
+
+
+SAIBA MAIS
+Veja o trecho da seguinte notícia:
+
+“PF identifica invasão nos celulares de presidentes de STJ, Câmara e Senado; PGR também foi alvo”.
+
+(Fonte: G1, 2019)
+
+Analisando esse ocorrido, percebemos a importância dos softwares, cuja função é a de garantir a CID nas instituições.
+
+Pesquise outras situações similares e procure perceber como foi a intervenção da segurança lógica nesses casos.
+
+VERIFICANDO O APRENDIZADO
+1. VOCÊ FOI CONTRATADO POR UMA EMPRESA PARA REALIZAR UMA CONSULTORIA NA ÁREA DE SEGURANÇA. DURANTE O TRABALHO REALIZADO, IDENTIFICOU QUE ELA ESTAVA SUJEITA A ATAQUES CONTRA A DISPONIBILIDADE POR FALTA DE MECANISMOS DE CONTROLE FÍSICOS OU LÓGICOS.
+
+NO RELATÓRIO ESCRITO PARA A EMPRESA, UMA DE SUAS SUGESTÕES FOI A IMPLANTAÇÃO DE UM MECANISMO DE CONTROLE:
+Físico, com o emprego de no-breaks para garantir o fornecimento de energia.
+
+Físico, com o uso de assinaturas digitais para garantir a identidade do emissor.
+
+Lógico, com o emprego de no-breaks para garantir o suprimento de energia.
+
+Lógico, com a aplicação de firewalls para garantir o controle de acesso físico.
+
+2. LEIA O FRAGMENTO DE TEXTO A SEGUIR:
+
+“DURANTE UM GRANDE SURTO EM MAIO DE 2017, RÚSSIA, CHINA, UCRÂNIA, TAIWAN, ÍNDIA E BRASIL FORAM OS PAÍSES MAIS AFETADOS. O WANNACRY AFETOU TANTO PESSOAS QUANTO ORGANIZAÇÕES GOVERNAMENTAIS, HOSPITAIS, UNIVERSIDADES, EMPRESAS FERROVIÁRIAS, FIRMAS DE TECNOLOGIA E OPERADORAS DE TELECOMUNICAÇÕES EM MAIS DE 150 PAÍSES. O NATIONAL HEALTH SERVICE DO REINO UNIDO, DEUTSCHE BAHN, A EMPRESA ESPANHOLA TELEFÓNICA, FEDEX, HITACHI E RENAULT ESTAVAM ENTRE AS VÍTIMAS.”
+
+FONTE: (AVAST, S.D.)
+
+COMO FOI DESCRITO ANTERIORMENTE, O WANNACRY CAUSOU, EM 2017, UMA GRANDE INFECÇÃO EM DIVERSAS EMPRESAS NO BRASIL E NO MUNDO. ESSE TIPO DE ATAQUE SEQUESTRAVA OS DADOS DOS USUÁRIOS E EXIGIA UMA RECOMPENSA PARA QUE ELES FOSSEM DISPONIBILIZADOS NOVAMENTE.
+
+PARA MINIMIZAR OS RISCOS DE UM USUÁRIO OU UMA EMPRESA SOFRER O MESMO TIPO DE ATAQUE, É NECESSÁRIO O EMPREGO DE:
+Um firewall, já que este tipo de controle impede a invasão à rede, não sendo possível o sequestro dos dados.
+
+Um sistema de detecção de intrusão, pois pode monitorar o tráfego da rede, identificando o sequestro dos dados.
+
+Um antivírus, porque este tipo de ataque é realizado por um malware conhecido como ransonware.
+
+Um sistema de criptografia dos dados, uma vez que o atacante não consegue sequestrar os dados criptografados.
+
+GABARITO
+1. Você foi contratado por uma empresa para realizar uma consultoria na área de segurança. Durante o trabalho realizado, identificou que ela estava sujeita a ataques contra a disponibilidade por falta de mecanismos de controle físicos ou lógicos.
+
+No relatório escrito para a empresa, uma de suas sugestões foi a implantação de um mecanismo de controle:
+
+A alternativa "A " está correta.
+
+
+O objetivo dos mecanismos de controle físico é proteger as instalações físicas, ou seja, a destruição, o roubo ou a paralisação de serviços. Os mecanismos físicos podem incluir desde o uso de portões, grades e cadeados até a manutenção do ambiente dentro de condições climáticas adequadas, como a utilização de equipamentos de refrigeração e o fornecimento de energia ininterruptos graças ao emprego de fontes de energia redundantes (geradores e no-breaks).
+
+2. Leia o fragmento de texto a seguir:
+
+“Durante um grande surto em maio de 2017, Rússia, China, Ucrânia, Taiwan, Índia e Brasil foram os países mais afetados. O WannaCry afetou tanto pessoas quanto organizações governamentais, hospitais, universidades, empresas ferroviárias, firmas de tecnologia e operadoras de telecomunicações em mais de 150 países. O National Health Service do Reino Unido, Deutsche Bahn, a empresa espanhola Telefónica, FedEx, Hitachi e Renault estavam entre as vítimas.”
+
+Fonte: (AVAST, s.d.)
+
+Como foi descrito anteriormente, o WannaCry causou, em 2017, uma grande infecção em diversas empresas no Brasil e no mundo. Esse tipo de ataque sequestrava os dados dos usuários e exigia uma recompensa para que eles fossem disponibilizados novamente.
+
+Para minimizar os riscos de um usuário ou uma empresa sofrer o mesmo tipo de ataque, é necessário o emprego de:
+
+A alternativa "C " está correta.
+
+
+A segurança de um ambiente pode ser considerada completa quando ela emprega um conjunto de mecanismos de controle físico e lógico com o objetivo de garantir a CID. Afinal, os mecanismos de controle lógicos, firewalls, IDS, criptografia, controle de acesso e antivírus são soluções que devem atuar em conjunto. Os antivírus, por exemplo, são os responsáveis pela detecção dos malwares como o WannaCry.
+
+Reconhecer a arquitetura de gerenciamento de redes
+
+INTRODUÇÃO
+Com o crescimento das redes, a administração e o gerenciamento delas passaram a ser atividades de suma importância. Afinal, seus ambientes são complexos e heterogêneos, tendo diversos tipos de equipamentos, fabricantes e protocolos em operação.
+
+O esquema a seguir apresenta um cenário típico de uma rede local (LAN):
+
+
+Fonte: Shutterstock
+Podemos observar na imagem diversos servidores e várias estações de trabalho com sistemas operacionais Windows e Linux, firewalls, roteadores, switches e equipamentos para redes sem fio.
+
+IMAGINEMOS AGORA A SEGUINTE SITUAÇÃO CORRIQUEIRA: UMA PARALISAÇÃO DE ALGUM SERVIÇO OU PARTE DA REDE. NESSES CASOS, MUITOS SE PERGUNTAM: ONDE OCORREU A FALHA? NO SERVIDOR? NO SWITCH? NA ESTAÇÃO?
+SWITCHES
+Switches ou comutadores são ferramentas de camada de enlace que conseguem identificar os equipamentos conectados em cada porta e direcionar os quadros para os destinos corretos, segmentando a rede.
+
+A gerência de redes auxilia no processo de identificação das falhas e na correção de problemas, permitindo que a rede possa operar corretamente e oferecer níveis de serviços adequados à necessidade dos usuários.
+
+O objetivo dessa gerência é monitorar e controlar os elementos físicos ou lógicos da rede, assegurando, segundo Stallings (1998), certo nível de qualidade de serviços.
+
+
+Fonte: Shutterstock
+QUALIDADE DE SERVIÇOS
+Trata-se do ato de oferecer serviços que atendam à necessidade dos usuários com um funcionamento adequado, bom desempenho e disponibilidade.
+
+DESCOBRIREMOS A SEGUIR COMO É POSSÍVEL ATINGIR ESSE NÍVEL DE QUALIDADE.
+ARQUITETURA DE GERENCIAMENTO OSI
+
+Fonte: Shutterstock
+Para oferecer uma organização das tarefas de gerenciamento de redes, a International Organization for Standardization (ISO) criou a M.3400, um modelo de gerência derivado de recomendação publicada pela International Telecommunications Union (ITU).
+
+ESSE MODELO SE BASEIA EM CINCO ÁREAS CONHECIDAS PELA SIGLA FCAPS (ABREVIAÇÃO, EM INGLÊS, DE FAULT, CONFIGURATION, ACCOUNTING PERFORMANCE E SECURITY). VAMOS CONHECÊ-LAS AGORA!
+GERÊNCIA DE DETECÇÃO E CORREÇÃO DE FALHAS (F = FAULT)
+A área de gerenciamento de falhas é importante para garantir que os serviços e as redes permaneçam em operação. De acordo com a norma ISO, esta área permite registrar, detectar e reagir às condições de falha da rede.
+
+ATENÇÃO
+Tal gerenciamento depende do bom funcionamento de cada componente da rede tanto de forma isolada quanto pela interoperação com outros equipamentos dela.
+
+As possíveis falhas nas redes podem ser causadas por problemas de:
+
+1
+Software: Falha no sistema operacional de um servidor ou em um serviço.
+
+Enlace: Paralisação de operação de uma ligação entre uma matriz e uma filial por um rompimento de cabo.
+
+2
+3
+Equipamentos: Interrupção no fornecimento de energia.
+
+Quando uma falha ocorre, o gerente da rede deve analisar as informações de gerência para identificar a causa raiz do problema, descobrindo, em uma diversidade de equipamentos, softwares e protocolos, o que realmente causou o problema.
+
+O gerenciamento de falhas pode ser dividido em dois subsistemas:
+
+1. Reativo: Trata as falhas no curto prazo (detecção, isolamento, correção e registro de falhas).
+
+
+Fonte: Shutterstock
+2. Proativo: Monitora a rede para tentar impedir que ocorram falhas.
+
+GERÊNCIA DE CONFIGURAÇÃO E OPERAÇÃO (C = CONFIGURATION)
+As redes são compostas por diversos equipamentos interligados entre si que possuem uma configuração.
+
+ESSAS CONFIGURAÇÕES DEVEM SER CONSISTENTES EM TODOS ELES, PERMITINDO QUE, NO CASO DE UMA REINICIALIZAÇÃO, O DISPOSITIVO VOLTE A OPERAR COM A CONFIGURAÇÃO CORRETA.
+Desse modo, é necessário realizar o gerenciamento das configurações dos equipamentos para:
+
+Garantir seu funcionamento com os ajustes corretos;
+Identificar quais dispositivos estão presentes na rede;
+Verificar se eles estão com as configurações corretas.
+
+Fonte: Shutterstock
+De acordo com Forouzan (2010), um sistema de gerenciamento de configuração precisa saber o estado de cada entidade e sua relação com outras entidades a todo instante.
+
+
+Fonte: Shutterstock
+GERÊNCIA DE CONTABILIDADE E FATURAMENTO (A = ACCOUNTING)
+De acordo com a ISO, a gerência de contabilidade e faturamento permite especificar, registrar e controlar o acesso de usuários e dispositivos aos recursos da rede. Por meio desta área de gerenciamento, é possível contabilizar o consumo de determinado recurso da rede.
+
+EXEMPLO
+A franquia de consumo de internet de uma linha telefônica, o que possibilita a tarifação para o usuário.
+
+Este tipo de gerenciamento impede que usuários possam monopolizar os recursos da rede e libera a elaboração de planos de evolução de acordo com a demanda de uso dela.
+
+GERÊNCIA DE DESEMPENHO E OTIMIZAÇÃO (P = PERFORMANCE)
+O objetivo do gerenciamento de desempenho e otimização é garantir que uma rede esteja em operação da forma mais eficiente possível. De acordo com a ISO, sua função é quantificar, medir, informar, analisar e controlar o desempenho de diferentes componentes dela.
+
+Dentro desta área de gerenciamento, é possível realizar dois tipos de avaliação de desempenho:
+
+AVALIAÇÃO DE DIAGNÓSTICO
+Detecta problemas e ineficiências na operação da rede.
+
+Exemplo: Se o gerente da rede percebe um equipamento ou enlace com baixa utilização, ele pode alterar a configuração para permitir que haja uma melhor distribuição de carga.
+
+Esse tipo de avaliação auxilia no gerenciamento de falhas, porque é capaz de antever situações que poderiam causar uma falha na rede.
+
+AVALIAÇÃO DE TENDÊNCIAS
+Auxilia no planejamento da evolução da rede, observando seu comportamento e estimando a necessidade de aumento de determinado recurso.
+
+Exemplo: O monitoramento de um enlace entre matriz e filial poderá indicar a necessidade de um aumento na capacidade dele quando a utilização média ultrapassar determinado valor.
+
+Para avaliar a operação da rede, devem ser utilizadas, aponta Forouzan (2010), medidas mensuráveis, como capacidade, tráfego, vazão (throughput) e tempo de resposta.
+
+CIFRAS
+Qualquer forma de substituição criptográfica aplicada ao texto original da mensagem.
+
+GERÊNCIA DE SEGURANÇA E PROTEÇÃO (S = SECURITY)
+
+Fonte: Shutterstock
+A gerência de segurança e proteção permite controlar o acesso aos recursos da rede e verificar se ela está de acordo com a Política de Segurança da Informação (PSI) da empresa.
+
+QUE PAPEL DESEMPENHA A SEGURANÇA NESSE CONTEXTO?
+Ela envolve todas as camadas da pilha de protocolos TCP/IP, o que engloba cada dispositivo e informação trafegando pela rede. Por isso, é possível afirmar que esta é a área mais difícil de ser gerenciada.
+
+ARQUITETURA DE GERENCIAMENTO EM REDE
+No vídeo a seguir, falaremos sobre a arquitetura de gerenciamento de rede.
+
+
+Entenda o processo da arquitetura de gerenciamento em rede. Para saber mais sobre Arquitetura de Segurança de Rede, clique aqui.
+
+
+VERIFICANDO O APRENDIZADO
+1. O DIRETOR DA EMPRESA EM QUE VOCÊ TRABALHA INFORMOU A OCORRÊNCIA DE DIVERSAS PARALISAÇÕES NA REDE, O QUE PREJUDICA A REALIZAÇÃO DAS ATIVIDADES DOS FUNCIONÁRIOS. ALEGANDO QUE ELA ESTÁ SUBDIMENSIONADA, ELE DEFENDE QUE A REDE NÃO CONSEGUE ATENDER À DEMANDA DE TRABALHO EXISTENTE.
+
+VOCÊ ARGUMENTA QUE A REDE, APESAR DE CONSTANTEMENTE MONITORADA, POSSUI UMA UTILIZAÇÃO CONSIDERADA ALTA (70%), PRECISANDO, PORTANTO, SER AMPLIADA PARA O ATENDIMENTO DESSA DEMANDA.
+
+ESSA SITUAÇÃO SE REFERE À ÁREA DE GERENCIAMENTO DE:
+Desempenho, que realiza a avaliação de tendências e auxilia no planejamento da evolução da rede.
+
+Contabilização, que monitora o consumo de recursos da rede, permitindo o uso racional dos dispositivos.
+
+Falhas, que é responsável por realizar um monitoramento proativo da rede, evitando que haja uma sobrecarga dela.
+
+Configuração, que realiza o monitoramento da configuração dos dispositivos, apresentando o consumo da rede.
+
+2. UMA ARQUITETURA DE GERENCIAMENTO DE REDE É COMPOSTA POR QUATRO COMPONENTES BÁSICOS: ESTAÇÃO DE GERENCIAMENTO, DISPOSITIVO GERENCIADO, BASE DE INFORMAÇÕES GERENCIAIS E PROTOCOLO DE GERENCIAMENTO.
+
+TAIS COMPONENTES TRABALHAM EM CONJUNTO PARA PERMITIR QUE A REDE POSSA SER MONITORADA E CONTROLADA. PARA ISSO:
+O agente envia mensagens para o gerente solicitando informações dos objetos.
+
+A gerência da rede é realizada pelo protocolo de gerenciamento, permitindo que os comandos sejam executados pelo gerente.
+
+A base de informações gerenciais mantém informações do estado dos diversos objetos existentes em um dispositivo.
+
+O gerente emite comandos para a base de informações gerenciais, informando os valores de cada objeto.
+
+GABARITO
+1. O diretor da empresa em que você trabalha informou a ocorrência de diversas paralisações na rede, o que prejudica a realização das atividades dos funcionários. Alegando que ela está subdimensionada, ele defende que a rede não consegue atender à demanda de trabalho existente.
+
+Você argumenta que a rede, apesar de constantemente monitorada, possui uma utilização considerada alta (70%), precisando, portanto, ser ampliada para o atendimento dessa demanda.
+
+Essa situação se refere à área de gerenciamento de:
+
+A alternativa "A " está correta.
+
+
+A situação apresentada é típica em diversas redes. Por meio dos sistemas de gerenciamento, é possível monitorar o seu uso e planejar os investimentos necessários para que as demandas da rede sejam atendidas, garantindo um nível de satisfação elevado para os seus usuários.
+
+2. Uma arquitetura de gerenciamento de rede é composta por quatro componentes básicos: estação de gerenciamento, dispositivo gerenciado, base de informações gerenciais e protocolo de gerenciamento.
+
+Tais componentes trabalham em conjunto para permitir que a rede possa ser monitorada e controlada. Para isso:
+
+A alternativa "C " está correta.
+
+
+A arquitetura de gerenciamento de redes é genérica, mas os sistemas de gerenciamento existentes são baseados nos componentes apresentados. A entidade gerenciadora ou de gerenciamento monitora e controla os dispositivos da rede por intermédio do software gerente. No dispositivo gerenciado, o software agente recebe os comandos do gerente por meio do protocolo de comunicação. Já o conjunto de objetos existentes compõe a base de informações gerenciais.
+
+CONCLUSÃO
+
+CONSIDERAÇÕES FINAIS
+Garantir a operação de uma rede é uma tarefa árdua. Afinal, ela deve estar preparada para suportar diversos tipos de ataques mediante o emprego de mecanismos de controle adequados.
+
+Além disso, os sistemas de gerenciamento podem permitir o controle de uma diversidade enorme de dispositivos, protocolos e aplicações. Os mecanismos de controle e gerenciamento adequado das redes, portanto, são fundamentais na manutenção da qualidade e da operacionalidade de seu serviço.
+
+
+AVALIAÇÃO DO TEMA:
+REFERÊNCIAS
+ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR ISO/IEC 27001:2013 – tecnologia da informação – técnicas de segurança – sistemas de gestão da segurança da informação – requisitos. Rio de Janeiro: ABNT, 2013a.
+
+ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR ISO/IEC 27002:2013 – tecnologia da informação – técnicas de segurança – código de prática para controles de segurança da informação. Rio de Janeiro: ABNT, 2013b.
+
+AVAST. WannaCry. Avast. s.d.
+
+CENTRO DE ESTUDOS, RESPOSTA E TRATAMENTO DE INCIDENTES DE SEGURANÇA NO BRASIL. Estatísticas dos incidentes reportados ao CERT.br. In: CERT.br. Consultado em meio eletrônico em: 28 maio 2020.
+
+FOROUZAN, B. A. Comunicação de dados e redes de computadores. 4. ed. Porto Alegre: AMGH, 2010.
+
+FOROUZAN, B. A.; MOSHARRAF, F. Redes de computadores: uma abordagem top-down. Porto Alegre: AMGH, 2013.
+
+KUROSE, J. F.; ROSS, K. W. Redes de computadores e a internet: uma abordagem top-down. 6. ed. São Paulo: Pearson, 2013.
+
+LUKASIK, S. J. Why the Arpanet was built. IEEE annals of the history of computing. n. 33. 2011. p. 4-21.
+
+MCCLURE, S.; SCAMBRAY, J.; KURTZ, G. Hackers expostos: segredos e soluções para a segurança de redes. 7. ed. Porto Alegre: Bookman, 2014.
+
+STALLINGS, W. Criptografia e segurança de redes – princípios e práticas. 4. ed. São Paulo: Pearson Prentice Hall, 2008.
+
+STALLINGS, W. SNMP, SNMPv2, SNMPv3 and RMON1 and 2. 3. ed. Boston: Addison-Wesley, 1998.
+
+EXPLORE+
+Pesquise na internet para:
+
+Visitar a página do Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil (CERT): CERT.br. Em Publicações, navegue pelos diversos artigos produzidos pelo CERT com recomendações sobre prevenções de ataques;
+Acessar a Cartilha de Segurança para Internet. Desenvolvida pelo CERT, ela descreve os riscos na utilização da internet e as soluções existentes para isso;
+Ler o documento intitulado Sistema de gerenciamento de rede: White Paper de práticas recomendadas (2018). Desenvolvido pela Cisco, ele apresenta uma estrutura mais detalhada sobre o processo de gerenciamento de redes;
+Saber mais sobre a Information Technology Infrastructure Library (ITIL). Trata-se de um conjunto de recomendações de boas práticas para o gerenciamento dos serviços de TI.
+CONTEUDISTA
+Sérgio dos Santos Cardoso Silva
+
+CURRÍCULO LATTES
